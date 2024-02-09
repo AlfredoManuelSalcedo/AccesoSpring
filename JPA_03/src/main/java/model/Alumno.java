@@ -31,13 +31,12 @@ public class Alumno implements Serializable {
 	}
 	
 
-	public Alumno(String dni, String apellido, int edad, String nombre, List<Curso> cursos) {
+	public Alumno(String dni, String apellido, int edad, String nombre) {
 		super();
 		this.dni = dni;
 		this.apellido = apellido;
 		this.edad = edad;
 		this.nombre = nombre;
-		this.cursos = cursos;
 	}
 
 
