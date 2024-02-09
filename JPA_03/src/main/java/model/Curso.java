@@ -29,6 +29,15 @@ public class Curso implements Serializable {
 	public Curso() {
 	}
 
+	public Curso(String id, int duracion, double precio, String titulo, Alumno alumno) {
+		super();
+		this.id = id;
+		this.duracion = duracion;
+		this.precio = precio;
+		this.titulo = titulo;
+		this.alumno = alumno;
+	}
+
 	public String getId() {
 		return this.id;
 	}
