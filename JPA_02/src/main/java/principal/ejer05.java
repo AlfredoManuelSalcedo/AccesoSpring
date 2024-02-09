@@ -7,26 +7,18 @@ import javax.persistence.Persistence;
 
 import model.Alumno;
 
-
-public class ejer04 {
+public class ejer05 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		EntityManagerFactory emf= Persistence.createEntityManagerFactory("default");
 		EntityManager em = emf.createEntityManager();
-		Alumno alumno = em.find(Alumno.class,"1111");
+		
 		EntityTransaction transaccion=em.getTransaction();
 		transaccion.begin();
-		if (alumno != null) {
-			alumno.setEdad(alumno.getEdad()+1);
-			Alumno a2=em.merge(alumno);
-			System.out.println(a2.getEdad());
-		}else {
-			System.out.println("no existe");
-		}
+		Alumno al1 = new Alumno("1234","Furro", 4, "Alberto");
+		em.persist(al1);
 		transaccion.commit();
-		System.exit(0);
-	
 	}
 
 }
