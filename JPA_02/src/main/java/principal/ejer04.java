@@ -14,7 +14,12 @@ public class ejer04 {
 		EntityManagerFactory emf= Persistence.createEntityManagerFactory("default");
 		EntityManager em = emf.createEntityManager();
 		Alumno alumno = em.find(Alumno.class,"1111");
-		System.out.println(alumno.getNombre());
+		if (alumno != null) {
+			System.out.println(alumno.getNombre());
+		}else {
+			System.out.println("no existe");
+		}
+	
 	}
 
 }
